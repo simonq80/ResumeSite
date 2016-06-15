@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<html ng-app="projectApp">
+<head>
+  <title>Simon Quiqley</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body ng-controller="ProjectController">
+  <div class="title-bar"><span>Simon Quigley</span><span>Projects</span><span>CV</span></div>
+  <div class ="p-search">Search: <input class ="p-searchbox" ng-model="query" /></div>
+  <div ng-repeat="project in projects | filter:query | orderBy:'name'"  class="p-main">
+	<div><a class="pName"href="http://{{project.link}}">{{project.name}}</a></div>
+	<div class="pLanguage">Language: {{project.language}}</div>
+	<p class="pDesc">{{project.description}}</p>
+  </div>
+
+</body>
+</html>

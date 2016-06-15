@@ -1,0 +1,77 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+.title-bar{
+	margin: -.5em -0.5em 3em -0.5em;
+	background-color: #555555;
+	color: grey;
+	padding: 1em;
+}
+.title-bar > span{
+	padding: 0 2em 0 2em;
+	
+}
+
+.p-search {
+	font-size: 1.5em;
+	margin-bottom: 2em;
+}
+.p-searchbox {
+	font-size: 1em;
+}
+
+.p-main {
+	border: 0.1em solid grey;
+	margin-bottom: 2em;
+	padding: 0.5em;
+	background-color:#DDDDDD;
+}
+.pName{
+	font-size: 2em;
+	color:grey;
+}
+.p-main.ng-enter, .p-main.ng-move {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.p-main.ng-enter.ng-enter-active,
+.p-main.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+.p-main.ng-leave {
+  animation: 0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from { opacity:1; }
+  to { opacity:0; }
+}
