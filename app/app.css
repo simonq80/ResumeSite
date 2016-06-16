@@ -31,14 +31,26 @@
 }
 .title-bar{
 	margin: -.5em -0.5em 3em -0.5em;
-	background-color: #555555;
+	background-color: #444;
 	color: grey;
 	padding: 1em;
+  border: none; border-collapse: collapse;
 }
-.title-bar > span{
-	padding: 0 2em 0 2em;
-	
-}
+
+.title-bar td{
+  border-left: 2px solid #555555;
+  padding: 1em;
+ }
+
+.title-bar td:first-child{
+  border-left: none;
+  padding: 1em;
+ }
+ .title-bar a{
+  display:block;
+ }
+ 
+
 
 .title-link{
   color:grey;
@@ -49,6 +61,7 @@
 	font-size: 1.5em;
 	margin-bottom: 1.5em;
 }
+
 
 .p-searchbox {
 	font-size: 1em;

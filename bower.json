@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "resume-site",
+  "description": "ASDf",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/simonq80/resumesite",
   "license": "MIT",
   "private": true,
   "dependencies": {

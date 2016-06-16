@@ -1,20 +1,37 @@
 [
 	{
-		"name": "Project3",
-		"language": "C#",
-		"description": "My Project Desc2",
-		"link": "github.com/user/project3"
+		"name": "Final Year Management System",
+		"language": "Ruby on Rails",
+		"description": "Final Year Project Entry System, which automatically assigned a second reader to entered projects.",
+		"link": "github.com/laveryl/FinalYearManagementSystem",
+		"date": "Q1 2016"
 	},
 	{
-		"name": "Project1",
-		"language": "Java",
-		"description": "My Project Desc",
-		"link": "github.com/user/project1"
+		"name": "Hadoop DFS Client for Alfresco",
+		"language": "Java ",
+		"description": "Extension for Alfresco allowing access to Hadoop DFS Databases",
+		"link": "github.com/ddoyle4/cs3012",
+		"date": "Q3 2015"
 	},
 	{
-		"name": "Project2",
-		"language": "C#",
-		"description": "My Project Desc2",
-		"link": "github.com/user/project2"
+		"name": "Proxy",
+		"language": "Python",
+		"description": "Simple HTTP Proxy ",
+		"link": "github.com/simonq80/Proxy",
+		"date": "Q1 2016"
+	},
+	{
+		"name": "Bluetooth Mouse/Keyboard App for Android",
+		"language": "Java ",
+		"description": "Android app which emulated a mouse and keyboard, uses a python PC-side application to recieve input",
+		"link": "github.com/mashikag/28",
+		"date": "Q1 2015"
+	},
+	{
+		"name": "Secure Storage Application",
+		"language": "Java ",
+		"description": "Java application using the Dropbox api to facilitate upload/download of encrypted files to Dropbox with a User/Admin login system",
+		"link": "github.com/simonq80/SimonsSecurishStorage",
+		"date": "Q2 2016"
 	}
 ]
