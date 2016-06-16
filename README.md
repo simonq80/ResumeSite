@@ -1,1 +1,1 @@
-Simple Resume Site, written as a one page app in AngularJS
+Simple Resume Site, written as a SPA in AngularJS
