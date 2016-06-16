@@ -1,7 +1,7 @@
 var projectApp = angular.module('projectApp', ['ngRoute']);
 
 // Define the `PhoneListController` controller on the `phonecatApp` module
-projectApp.controller('ProjectController', ['$scope', '$http', function PhoneListController($scope, $http) {
+projectApp.controller('TitleController', ['$scope', '$http', function PhoneListController($scope, $http) {
 
 	$http.get('data/pages.json').then(function(response) {
         $scope.pages = response.data;
