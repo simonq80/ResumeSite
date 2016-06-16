@@ -6,14 +6,22 @@ projectApp.controller('ProjectController', ['$scope', '$http', function PhoneLis
 	$http.get('data/pages.json').then(function(response) {
         $scope.pages = response.data;
       });
+}]);
 
-	$http.get('data/projects.json').then(function(response) {
-        $scope.projects = response.data;
-      });
-	$http.get('data/homeParas.json').then(function(response) {
+projectApp.controller('HomeController', ['$scope', '$http', function PhoneListController($scope, $http) {
+
+  $http.get('data/homeParas.json').then(function(response) {
         $scope.homeParas = response.data;
       });
 }]);
+
+projectApp.controller('ProjectsController', ['$scope', '$http', function PhoneListController($scope, $http) {
+  $scope.language = ""
+  $http.get('data/projects.json').then(function(response) {
+        $scope.projects = response.data;
+      });
+}]);
+
 
 projectApp.config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
@@ -35,6 +43,7 @@ projectApp.config(['$locationProvider', '$routeProvider',
 
 projectApp.directive('myData', function() {
 	return{
+    controller: 'ProjectsController',
 		templateUrl: 'project.template.html'
 	};
 });
@@ -47,6 +56,7 @@ projectApp.directive('myCv', function() {
 
 projectApp.directive('myHome', function() {
 	return{
+    controller: 'HomeController',
 		templateUrl: 'home.template.html'
 	};
 });

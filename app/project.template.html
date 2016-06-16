@@ -1,5 +1,14 @@
-<div class ="p-search">Search: <input class ="p-searchbox" ng-model="query" /></div>
-  <div ng-repeat="project in projects | filter:query | orderBy:'name'"  class="p-main">
+<div class ="p-search">Search: <input class ="p-searchbox" ng-model="query" />
+<form class="lang-form">
+	Language:
+  <input type="radio" ng-model="language" value=""> All
+  <input type="radio" ng-model="language" value="Java"> Java
+  <input type="radio" ng-model="language" value="C#"> C#
+ </form>
+  </div>
+
+
+  <div ng-repeat="project in projects | filter:query | filter:language | orderBy:'name'"  class="p-main">
 	<div><a class="pName"href="http://{{project.link}}">{{project.name}}</a></div>
 	<div class="pLanguage">Language: {{project.language}}</div>
 	<p class="pDesc">{{project.description}}</p>
