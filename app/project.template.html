@@ -1,0 +1,6 @@
+<div class ="p-search">Search: <input class ="p-searchbox" ng-model="query" /></div>
+  <div ng-repeat="project in projects | filter:query | orderBy:'name'"  class="p-main">
+	<div><a class="pName"href="http://{{project.link}}">{{project.name}}</a></div>
+	<div class="pLanguage">Language: {{project.language}}</div>
+	<p class="pDesc">{{project.description}}</p>
+</div>

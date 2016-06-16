@@ -6,17 +6,15 @@
 <head>
   <title>Simon Quiqley</title>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <link rel="stylesheet" href="app.css" />
 </head>
 <body ng-controller="ProjectController">
-  <div class="title-bar"><span>Simon Quigley</span><span>Projects</span><span>CV</span></div>
-  <div class ="p-search">Search: <input class ="p-searchbox" ng-model="query" /></div>
-  <div ng-repeat="project in projects | filter:query | orderBy:'name'"  class="p-main">
-	<div><a class="pName"href="http://{{project.link}}">{{project.name}}</a></div>
-	<div class="pLanguage">Language: {{project.language}}</div>
-	<p class="pDesc">{{project.description}}</p>
-  </div>
+  <div class="title-bar"><span ng-repeat="page in pages"><a class="title-link" href="{{page.link}}">{{page.title}}</a></span></div>
+
+
+  <div ng-view></div>
 
 </body>
 </html>

@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Home",
+		"link": "#!/home"
+	},
+	{
+		"title": "Projects",
+		"link": "#!/projects"
+	},
+	{
+		"title": "CV",
+		"link": "#!/cv"
+	}
+]

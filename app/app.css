@@ -1,5 +1,6 @@
 /* app css stylesheet */
 
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -37,6 +38,11 @@
 .title-bar > span{
 	padding: 0 2em 0 2em;
 	
+}
+
+.title-link{
+  color:grey;
+  text-decoration: none;
 }
 
 .p-search {

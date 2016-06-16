@@ -1,0 +1,4 @@
+<div ng-repeat="paragraph in homeParas">
+	<span class="paragraph-title">{{paragraph.title}}</span><span ng-repeat="img in paragraph.imgUrls"><img height="50" src="{{img}}"/></span>
+	<p>{{paragraph.content}}</p>
+</div>
