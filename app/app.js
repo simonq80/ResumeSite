@@ -23,13 +23,57 @@ projectApp.controller('ProjectsController', ['$scope', '$http', function PhoneLi
       });
 }]);
 
-projectApp.controller('TestController', ['$scope', '$location', function PhoneListController($scope, $location) {
+projectApp.controller('TestController', ['$scope', '$location', function TestController($scope, $location) {
   $scope.username ="";
   $scope.password ="";
   $scope.submit = function(){
     $location.hash(this.username+":"+this.password);
   }
   $scope.qwer= $location.hash().split(":");
+
+}]);
+
+projectApp.controller('BooksController', ['$scope', '$http', function BooksController($scope, $http){
+  
+  $scope.count = 0;
+
+    
+    $http.get('/api/todos').success(function(data) {
+            $scope.todos = data;
+            console.log(data);
+        })
+        .error(function(data) {
+            console.log('Error: ' + data);
+    });
+    
+
+     $scope.createTodo = function() {
+      if($scope.todoForm.$valid){
+        $http.post('/api/todos', $scope.formData)
+            .success(function(data) {
+                $scope.formData = {}; // clear the form so our user is ready to enter another
+                $scope.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+      } 
+
+    };
+
+    $scope.deleteTodo = function(id) {
+        $http.delete('/api/todos/' + id)
+            .success(function(data) {
+                $scope.todos = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    };
+
+    $scope.getTodos;
 
 }]);
 
@@ -52,6 +96,9 @@ projectApp.config(['$locationProvider', '$routeProvider',
         when('/test', {
           template: '<test-dir></test-dir>'
         }).
+        when('/database', {
+          template: '<books-test></books-test>'
+        }).
         otherwise('/home');
     }
 ]);
@@ -61,6 +108,13 @@ projectApp.directive('myData', function() {
     controller: 'ProjectsController',
 		templateUrl: 'project.template.html'
 	};
+});
+
+projectApp.directive('booksTest', function() {
+  return{
+    controller: 'BooksController',
+    templateUrl: 'database.template.html'
+  };
 });
 
 projectApp.directive('myCv', function() {

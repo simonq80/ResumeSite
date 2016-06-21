@@ -1,0 +1,8 @@
+<h3>TODO: {{todos.length}}</h3>
+<div>
+<form name="todoForm">
+	<input name="todoText" type="text" ng-required="true" ng-model="formData.text" required>
+	<button type="submit" ng-click="createTodo()">Add</button>
+</form>
+</div>
+<div ng-repeat="todo in todos">{{$index+1}}. {{todo.text}}<input type="checkbox" ng-click="deleteTodo(todo._id)"></div>

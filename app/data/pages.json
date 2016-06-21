@@ -14,5 +14,9 @@
 	{
 		"title": "Test",
 		"link": "#!/test"
+	},
+	{
+		"title":"Database",
+		"link": "#!/database"
 	}
 ]
