@@ -1,1 +1,1 @@
-Simple Resume Site, written as a SPA in AngularJS
+Clowning with Angular
